@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light" data-lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WITLOF 2025 — Speels & Creatief</title>
+  <meta name="description" content="Speelse, creatieve witlof-inspiratie anno 2025: gezondheid, gemaksgroente, en snelle recepten. Tweetalig NL/EN met contactformulier." />
+  <meta property="og:title" content="WITLOF 2025 — Speels & Creatief" />
+  <meta property="og:description" content="Positieve inleiding over witlof (gezondheid + gemak), snelle recepten, en contact. NL/EN." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="social-preview.png" />
+  <meta property="og:url" content="https://witlof-2025.nl/" />
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <style>
+    :root{ --bg:#0b1109; --card:#0f160d; --text:#eef7ee; --muted:#a6b5a6;
+           --accent:#ffe066; --accent-2:#4ad66d; --ring:rgba(255,255,255,.12);
+           --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);}
+    [data-theme="light"]{ --bg:#f7fff5; --card:#ffffff; --text:#1b2a17; --muted:#5f6b5f;
+                           --ring:rgba(0,0,0,.08); --shadow:0 6px 24px rgba(0,0,0,.08);}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{ margin:0; color:var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(255,224,102,.35), transparent 60%),
+                 radial-gradient(900px 700px at 110% 0%, rgba(74,214,109,.25), transparent 60%),
+                 var(--bg);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif; letter-spacing:.2px; }
+    a{color:var(--text)} .container{max-width:1080px;margin:0 auto;padding:24px}
+    .card{ background:linear-gradient(180deg, rgba(255,255,255,.04), transparent), var(--card);
+            border:1px solid var(--ring); border-radius:var(--radius); box-shadow:var(--shadow)}
+    header{ position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(12px);
+             background:linear-gradient(to bottom, rgba(0,0,0,.12), transparent);
+             border-bottom:1px solid var(--ring)}
+    nav{display:flex; align-items:center; gap:12px; padding:10px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
+    .logo{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#17210f;font-weight:900;
+      background:conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), var(--accent))}
+    .spacer{flex:1}
+    .chip, .btn, .navlink{ border:1px solid var(--ring); border-radius:12px; padding:8px 12px; background:transparent; color:var(--text);}
+    .btn.primary{border:none; background:linear-gradient(92deg, var(--accent), var(--accent-2)); color:#0b0c0a; font-weight:700; cursor:pointer}
+    .btn{cursor:pointer} .navlink{text-decoration:none} .lang-toggle{display:inline-flex; align-items:center; gap:8px}
+    .hero{padding:56px 0 10px; display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
+    @media(max-width:900px){ .hero{grid-template-columns:1fr} }
+    .h1{font-size:clamp(34px,4vw,52px); line-height:1.05; margin:0 0 12px; font-weight:900}
+    .gradient{background:linear-gradient(92deg, var(--accent), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .badge{display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border:1px dashed var(--ring); border-radius:999px; color:var(--muted); font-size:14px}
+    section{padding:28px 0} .section-title{font-size:22px; margin:0 0 12px; font-weight:800}
+    .grid{display:grid; gap:16px} @media(min-width:700px){ .cols-2{grid-template-columns:repeat(2,1fr)} }
+    details{border:1px dashed var(--ring); border-radius:12px; padding:12px 14px; background:linear-gradient(180deg, rgba(255,224,102,.08), rgba(74,214,109,.06))}
+    summary{cursor:pointer; font-weight:700}
+    @keyframes floaty { from { transform: translateY(0) } 50% { transform: translateY(-6px) } to { transform: translateY(0) } }
+    .float { animation: floaty 6s ease-in-out infinite }
+    .fade-in { opacity:0; transform: translateY(6px); animation: fade .7s ease forwards }
+    @keyframes fade { to { opacity:1; transform:none } }
+    .footer{margin-top:28px; padding:24px 0; border-top:1px solid var(--ring); color:var(--muted); font-size:14px}
+    .sr{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo float" aria-hidden="true">W</div>
+          <span>WITLOF 2025</span>
+        </div>
+        <a class="navlink" href="#about" data-i18n="nav.about">Over</a>
+        <a class="navlink" href="#benefits" data-i18n="nav.benefits">Gezondheid</a>
+        <a class="navlink" href="#contact" data-i18n="nav.contact">Contact</a>
+        <div class="spacer"></div>
+        <div class="lang-toggle">
+          <button class="btn" id="langBtn" aria-label="Toggle language">NL / EN</button>
+          <button class="btn" id="themeBtn" aria-label="Thema wisselen">🌗</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="badge" data-i18n="badge">🥬 Witlof, maar dan next-gen • 25+</div>
+        <h1 class="h1">Speels & <span class="gradient">creatief</span> — <span data-i18n="title">witlof anno 2025</span></h1>
+        <p class="fade-in" data-i18n="intro">
+          Witlof is een echte gemaksgroente: snel schoon te maken, knapperig rauw en heerlijk om te roosteren. Boordevol vezels,
+          vitamine K en folaat — perfect voor doordeweeks.
+        </p>
+        <div class="grid cols-2" style="margin-top:14px">
+          <div class="card" style="padding:14px">
+            <strong data-i18n="health.title">Gezondheid</strong>
+            <ul style="margin:8px 0 0 18px">
+              <li data-i18n="health.item1">Rijk aan vezels → goed voor je darmen</li>
+              <li data-i18n="health.item2">Vitamine K & folaat ondersteunen herstel</li>
+              <li data-i18n="health.item3">Weinig calorieën, veel volume</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:14px">
+            <strong data-i18n="easy.title">Gemaksgroente</strong>
+            <ul style="margin:8px 0 0 18px">
+              <li data-i18n="easy.item1">Snel te snijden: salade, pan, oven of airfryer</li>
+              <li data-i18n="easy.item2">Combineert top met citrus, noten en kaas</li>
+              <li data-i18n="easy.item3">Budgetvriendelijk en overal verkrijgbaar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta" style="margin-top:16px">
+          <a class="btn primary" href="#benefits" data-i18n="cta.learn">Lees meer</a>
+          <a class="btn" href="#contact" data-i18n="cta.contact">Contact</a>
+        </div>
+      </div>
+      <div class="card float" style="padding:16px">
+        <h2 class="section-title" data-i18n="quickideas">3 snelle ideeën</h2>
+        <details open>
+          <summary data-i18n="idea1.title">Airfryer chips met Parmezaan</summary>
+          <p data-i18n="idea1.body">Witlof in brede repen, 180 °C 8–10 min. Parmezaan erover en 1–2 min extra.</p>
+        </details>
+        <details>
+          <summary data-i18n="idea2.title">Miso-honing geroosterd</summary>
+          <p data-i18n="idea2.body">Witte miso + honing + azijn. Smeer op gehalveerde stronken, 200 °C 18–22 min.</p>
+        </details>
+        <details>
+          <summary data-i18n="idea3.title">Frisse salade 12 min</summary>
+          <p data-i18n="idea3.body">Witlof + sinaasappel + venkel + walnoot. Mosterd-honing dressing.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title" data-i18n="about.title">Over deze pagina</h2>
+      <div class="card" style="padding:16px">
+        <p data-i18n="about.body">
+          Voor 25-plussers die zin hebben in speelse, creatieve en snelle witlof-inspiratie. Tweetalig, met subtiele animaties
+          en een simpel contactformulier (Netlify-ready).
+        </p>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <h2 class="section-title" data-i18n="benefits.title">Waarom witlof in 2025?</h2>
+      <div class="grid cols-2">
+        <div class="card" style="padding:16px">
+          <strong data-i18n="benefits.card1.title">Voedzaam</strong>
+          <p data-i18n="benefits.card1.body">Vezels ondersteunen je microbioom; vitamine K & folaat passen goed in een gebalanceerd eetpatroon.</p>
+        </div>
+        <div class="card" style="padding:16px">
+          <strong data-i18n="benefits.card2.title">Veelzijdig</strong>
+          <p data-i18n="benefits.card2.body">Rauw, gebakken of geroosterd—witlof past bij comfort food én lichte salades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+      <div class="card" style="padding:16px">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              onsubmit="if(!window.netlify){ alert(window.i18n.t('contact.sent')); }">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="sr"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <label><span data-i18n="contact.name">Naam</span><br/>
+            <input required name="name" style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text)"/>
+          </label><br/><br/>
+          <label><span data-i18n="contact.email">E-mail</span><br/>
+            <input type="email" required name="email" style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text)"/>
+          </label><br/><br/>
+          <label><span data-i18n="contact.msg">Je bericht</span><br/>
+            <textarea required name="message" rows="4" style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text)"></textarea>
+          </label><br/><br/>
+          <button class="btn primary" type="submit" data-i18n="contact.send">Versturen</button>
+          <a class="btn" href="mailto:ed.stemkens@home.nl?subject=Witlof%202025" data-i18n="contact.mail">Mail direct</a>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2025 WITLOF 2025 • <span data-i18n="footer">Gemaakt met ♥︎ en veel crunch.</span></div>
+    </footer>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){ root.setAttribute('data-theme', savedTheme); }
+    themeBtn.addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', current);
+      localStorage.setItem('theme', current);
+    });
+    if(!savedTheme){ root.setAttribute('data-theme','light'); }
+
+    const dict = {
+      nl: {
+        "nav.about":"Over", "nav.benefits":"Gezondheid", "nav.contact":"Contact",
+        "badge":"🥬 Witlof, maar dan next-gen • 25+", "title":"witlof anno 2025",
+        "intro":"Witlof is een echte gemaksgroente: snel schoon te maken, knapperig rauw en heerlijk om te roosteren. Boordevol vezels, vitamine K en folaat — perfect voor doordeweeks.",
+        "health.title":"Gezondheid", "health.item1":"Rijk aan vezels → goed voor je darmen",
+        "health.item2":"Vitamine K & folaat ondersteunen herstel", "health.item3":"Weinig calorieën, veel volume",
+        "easy.title":"Gemaksgroente", "easy.item1":"Snel te snijden: salade, pan, oven of airfryer",
+        "easy.item2":"Combineert top met citrus, noten en kaas", "easy.item3":"Budgetvriendelijk en overal verkrijgbaar",
+        "cta.learn":"Lees meer", "cta.contact":"Contact", "quickideas":"3 snelle ideeën",
+        "idea1.title":"Airfryer chips met Parmezaan", "idea1.body":"Witlof in brede repen, 180 °C 8–10 min. Parmezaan erover en 1–2 min extra.",
+        "idea2.title":"Miso-honing geroosterd", "idea2.body":"Witte miso + honing + azijn. Smeer op gehalveerde stronken, 200 °C 18–22 min.",
+        "idea3.title":"Frisse salade 12 min", "idea3.body":"Witlof + sinaasappel + venkel + walnoot. Mosterd-honing dressing.",
+        "about.title":"Over deze pagina",
+        "about.body":"Voor 25-plussers die zin hebben in speelse, creatieve en snelle witlof-inspiratie. Tweetalig, met subtiele animaties en een simpel contactformulier (Netlify-ready).",
+        "benefits.title":"Waarom witlof in 2025?",
+        "benefits.card1.title":"Voedzaam",
+        "benefits.card1.body":"Vezels ondersteunen je microbioom; vitamine K & folaat passen goed in een gebalanceerd eetpatroon.",
+        "benefits.card2.title":"Veelzijdig",
+        "benefits.card2.body":"Rauw, gebakken of geroosterd—witlof past bij comfort food én lichte salades.",
+        "contact.title":"Contact", "contact.name":"Naam", "contact.email":"E-mail",
+        "contact.msg":"Je bericht", "contact.send":"Versturen", "contact.mail":"Mail direct",
+        "contact.sent":"Bedankt! Bericht verzonden (of lokaal verstuurd).",
+        "footer":"Gemaakt met ♥︎ en veel crunch."
+      },
+      en: {
+        "nav.about":"About", "nav.benefits":"Health", "nav.contact":"Contact",
+        "badge":"🥬 Chicory, but next-gen • 25+", "title":"chicory for 2025",
+        "intro":"Chicory is a true convenience veg: quick to prep, crunchy raw and great roasted. Packed with fiber, vitamin K and folate — perfect for weeknights.",
+        "health.title":"Health", "health.item1":"High in fiber → gut-friendly",
+        "health.item2":"Vitamin K & folate support recovery", "health.item3":"Low calories, high volume",
+        "easy.title":"Convenience", "easy.item1":"Quick to slice: salad, pan, oven or air fryer",
+        "easy.item2":"Pairs brilliantly with citrus, nuts and cheese", "easy.item3":"Budget-friendly and widely available",
+        "cta.learn":"Learn more", "cta.contact":"Contact", "quickideas":"3 quick ideas",
+        "idea1.title":"Air fryer chips with Parmesan", "idea1.body":"Slice chicory, 180 °C for 8–10 min. Add Parmesan and 1–2 min extra.",
+        "idea2.title":"Miso-honey roasted", "idea2.body":"White miso + honey + vinegar. Brush halved heads, 200 °C for 18–22 min.",
+        "idea3.title":"Fresh salad in 12 min", "idea3.body":"Chicory + orange + fennel + walnut. Mustard-honey dressing.",
+        "about.title":"About this page",
+        "about.body":"For 25+ folks who want playful, creative and quick chicory inspiration. Bilingual, with subtle animations and a simple contact form (Netlify-ready).",
+        "benefits.title":"Why chicory in 2025?",
+        "benefits.card1.title":"Nutritious",
+        "benefits.card1.body":"Fiber supports your microbiome; vitamin K & folate fit a balanced diet.",
+        "benefits.card2.title":"Versatile",
+        "benefits.card2.body":"Raw, sautéed or roasted—chicory fits comfort food and light salads.",
+        "contact.title":"Contact", "contact.name":"Name", "contact.email":"Email",
+        "contact.msg":"Your message", "contact.send":"Send", "contact.mail":"Email directly",
+        "contact.sent":"Thanks! Message sent (or handled locally).",
+        "footer":"Made with ♥︎ and extra crunch."
+      }
+    };
+    window.i18n = {
+      t: (k) => dict[document.documentElement.getAttribute('data-lang')||'nl'][k] || k,
+      set: (lang) => {
+        document.documentElement.setAttribute('data-lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const key = el.getAttribute('data-i18n'); el.textContent = dict[lang][key] || el.textContent;
+        });
+        localStorage.setItem('lang', lang);
+      }
+    };
+    const savedLang = localStorage.getItem('lang') || 'nl';
+    window.i18n.set(savedLang);
+    const langBtn = document.getElementById('langBtn');
+    langBtn.addEventListener('click', ()=>{
+      const next = (document.documentElement.getAttribute('data-lang') === 'nl') ? 'en' : 'nl';
+      window.i18n.set(next);
+    });
+    (function(){
+      const skip = document.createElement('a');
+      skip.href = '#about'; skip.textContent = 'Skip to content';
+      skip.style.position='absolute'; skip.style.left='-9999px';
+      skip.addEventListener('focus', ()=>{ skip.style.left='12px'; skip.style.top='12px'; });
+      document.body.prepend(skip);
+    })();
+  </script>
+</body>
+</html>
